@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    height: 95vh;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    overflow: auto;
+}
+  
+.title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+.question-container {
+    position: relative;
+    margin-top: 60px;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-review {
+    padding: 5px 0 20px 0;
+}
+  
+.question-review {
+    border: #333 1px solid;
+    border-radius: 10px;
+    padding: 10px 0 10px 14px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 5px 5px 10px #888888;
+}
+  
+.option-container {
+    margin-top: 10px;
+}
+  
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.btn:hover {
+    background-color: #555;
+}
+
+.btn-quiz {
+    position: absolute;
+    margin-top: 16px;
+    left: 0;
+    right: 0;
+}
+
+.correct-answer {
+    color: green;
+}
+
+.incorrect-answer {
+    color: red;
+}
+
+.show-results {
+    padding: 20px 0;
+    margin-top: 8rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.copyright {
+    margin-top: 40px;
+}
+
+/* Effect loader */
+.screen-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    column-gap: 10px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #555;
+    border-bottom: 16px solid #555;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.screen-loader_title {
+    font-size: 40px;
+}
+
+.true-answer {
+    background-color: rgb(13, 201, 13);
+}
+
+.wrong-answer {
+    background-color: red;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 768px){
+    .screen-loader {
+        margin-top: 60%;
+    }
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #555;
+        border-bottom: 16px solid #555;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+    .screen-loader_title {
+        font-size: 20px;
+    }
 }
